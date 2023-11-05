@@ -1,0 +1,16 @@
+#first-paragraph {
+    background-color: lightblue;
+    color: lightcoral;
+  }
+  h1 {
+    color: lawngreen;
+  }
+  .standart-paragraph {
+    background-color: lightgrey;
+  }
+  special {
+    background-color: lightpink;
+  }
+  #experiment {
+    background-color: chocolate;
+  }

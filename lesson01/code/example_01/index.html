@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to HTML</h1>
+
+    <ul>
+        <li>  
+          <a href="https://ru.wikipedia.org/wiki/Perucetus_coloss">
+            Колосальный кит
+          </a>
+          <!-- тег а - ancor - якорь -->
+        </li>
+        <li>  
+          <a href="#nested-element-example">
+            Пример вложенного элемента
+          </a>
+          <!-- тег а - ancor - якорь -->
+        </li>
+        <li>  
+          <a href="#lists">
+            Списки
+          </a>
+          <!-- тег а - ancor - якорь -->
+        </li>
+      </ul>
+
+    <p>P - is teg for paragraph</p>
+    <div>
+      <p id="nested-element-example">Пример вложенного элемента</p>
+    </div>
+    <!-- 
+        <></> - парные теги
+        <> - одиночные теги
+        <div /> - самозакрывающийся тег
+        img - image - изображение, имеет два атрибута
+            src - источник, адрес ресурса
+            alt - альтернатива
+
+     -->
+     <!-- пример картинки с абсолютным путем -->
+    <img 
+        src="https://hips.hearstapps.com/hmg-prod/images/womanyellingcat-1573233850.jpg"
+        alt="meme with a cat"
+        width="300"
+        >
+    <h2>Подзаголовок</h2>
+
+    <br>
+
+    <!-- 
+        . - это текущая папка относительно index
+        .. - родительская папка
+     -->
+     
+    <img src="./img/womanyellingcat-1573233850.jpg" alt="meme with a cat">
+
+    <h2 id="lists"> Списки (Lists)</h2>
+    <!-- ul - unordered list - ненумерованный список
+        li - list item - элемент в этом списке
+    -->
+    <h3>ненумерованный список</h3>
+    <ul type="-square">
+        <!-- type:
+             - none - без маркера
+             - circle - незаполненный маркер
+             - disk - заполненный маркер - значение по умолчанию
+             -square - квадратик
+        -->
+        <li>чесать пузо коту</li>
+        <li>загарать на солнышке</li>
+        <li>Свежие фрукты</li>
+    </ul>
+    <!-- ol - ordered list - нумерованный список
+        li - list item - элемент в этом списке
+    -->
+    <h3>нумерованный список</h3>
+    <ol type="I" start="4">
+        <!-- type:
+            reversed - меняет порядок следования
+            start "4" - с какого элемента начало
+        -->
+        <li>Гулять</li>
+        <li>Кататься</li>
+        <li>Ходить в гости</li>
+    </ol>
+    <h2>Таблицы</h2>
+    <!-- 
+        table - таблица
+        tr - table row - строка
+        td - table data - ячейка
+        th - заголовок
+     -->
+    <table border="3">
+        <tr>
+            <th>name</th>
+            <th>height</th>
+            <th>eye color</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>180</td>
+            <td>blue</td>
+        </tr>
+        <tr>
+            <td>Jack</td>
+            <td>160</td>
+            <td>braun</td>
+        </tr>
+
+    </table>
+  </body>
+</html>

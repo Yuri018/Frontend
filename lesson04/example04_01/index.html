@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google finder</title>
+</head>
+<body>
+    <h1>Google finder</h1>
+    <!-- query params:
+    ?имяИнпута=введенноеЗначение&имяСледующегоИнпута=введенноеЗначение
+    если значение содержало пробелы, то в URL будут плюсы
+    URL - uniform resource locator
+
+    https://zoom.us:3000/meeting/schedule?name=Vlad#best
+
+      https или http - scheme, protocol
+
+      zoom.us - domen - домен 
+
+      3000 - port - номер порта
+
+      /meeting/schedule - path - путь
+
+      ?name=Vlad - parameters - query params - парметры запроса
+
+      #best - anchor - якорь
+  -->
+    <form action="https://www.google.com/search" method="post">
+        <label for="search-query-input">Ваш запрос</label>
+        <input type="text" id="search-query-input" name="q">
+        <button type="submit">Search</button>
+    </form>
+    
+</body>
+</html>

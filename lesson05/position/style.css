@@ -1,0 +1,85 @@
+
+
+body {
+  /* 100vh - высота вью порта - View-port Height
+     10vw - ширина вью порта
+  */
+  height: 300vh;
+}
+
+.purple {
+    background-color: purple;  
+  }
+     
+  .green {
+    background-color: lightgreen; 
+  }
+   
+  .box {  
+    width: 200px;  
+    height: 200px;  
+    margin: 20px;  
+    /* padding: 20px; */
+  
+  }
+  
+  .small-box {
+    width: 100px;
+    height: 100px;
+  }
+     
+  .second {
+    position: relative;  
+    top: -30px;  
+    left: 50px;
+  }
+
+  .parent {
+    position: relative;
+  }
+
+  .child {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+  }
+
+  .sun {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: darkorange;
+    border-radius: 50%;
+
+  }
+  /* Пример 3 */
+
+.horizon {
+
+  height: 200px;
+  width: 800px;
+  background-color: lightcyan;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+}
+.close-horizon {
+  position: absolute;
+  color: red;
+  top: 10px;
+  right: 5px;
+}
+
+.banner {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(210, 210, 30);
+  position: sticky;
+  top: 30px;
+  z-index: 2;
+  /* z - index - определяет приоритет видимости элемента */
+}
+

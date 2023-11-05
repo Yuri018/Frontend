@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    gap: 40px;
+
+    justify-content: center;
+    /* выравнивание по главной оси (по умолчанию - горизонтально */
+
+    flex-wrap: wrap;
+    /* перенос контента на следующую строку при уменьшении ширины экрана */
+    flex-direction: row;
+    /* row - значение по умолчанию слева направо
+        column - сверху вниз
+        row-reverse - вправа налево
+        column-reverse - снизу вверх
+    */
+}
+
+.short {
+    width: 200px;  
+    height: 300px; 
+  }
+   
+  .tall {  
+    width: 200px;  
+    height: 250px;  
+  }
+.card {   
+    background-color: lightpink;
+}
+
+.container2 {
+    height: 800px;
+    background-color: lightgray;
+    display: flex;
+    gap: 24px;
+    justify-content: flex-end;
+    align-items:flex-end;
+    flex-wrap: wrap;
+    align-content:space-between;
+}
+.container-3 {
+    display: flex;  
+    gap: 20px;
+    justify-content:space-around;
+  }
+       
+  .container-4 {  
+    background-color: darkgray;
+    gap: 20px;
+    justify-content: space-around;
+    display: flex; 
+    flex-direction: column; 
+  }

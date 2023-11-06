@@ -12,42 +12,35 @@ FU – дым (видимость менее 10 км)
 DS - пыльная буря (видимость менее 10 км)
 SS - песчаная буря (видимость менее 10 км)
 */
-let abbreviation = "SS";
-
-function weather(abbreviation, decode) {
-    return decode(abbreviation);
-}
-
-function decode(abbreviation) {
-  switch (abbreviation) {
-    case SQ:
-      console.log("шквал");
-      break;
-    case PO:
-      console.log("пыльный вихрь");
-      break;
-    case FC:
-      console.log("торнадо");
-      break;
-    case BR:
-      console.log("дымка (видимость от 1 до 9 км)");
-      break;
-    case HZ:
-      console.log("мгла (видимость менее 10 км)");
-      break;
-    case FU:
-      console.log("дым (видимость менее 10 км)");
-      break;
-    case DS:
-      console.log("пыльная буря (видимость менее 10 км)");
-      break;
-    case SS:
-      console.log("песчаная буря (видимость менее 10 км)");
-      break;
-
+function decode(code){
+  switch (code) {
+    case "SQ":
+      return "шквал";
+    case "PO":
+      return "пыльный вихрь";
+    case "FC":
+      return "торнадо";
+    case "BR":
+      return "дымка (видимость от 1 до 9 км)";
+    case "HZ":
+      return "мгла (видимость менее 10 км)";
+    case "FU":
+      return "дым (видимость менее 10 км)";
+    case "DS":
+      return "пыльная буря (видимость менее 10 км)";
+    case "SS":
+      return "песчаная буря (видимость менее 10 км)";
     default:
-        console.log("Солнечно");
-      break;
+      return "нет такого когда";
   }
 }
+
+function weatherCode(weather_code, decode){
+  return decode(weather_code);
+}
+
+const result = weatherCode("PO", decode);
+console.log(result);
+console.log(weatherCode("SS", decode));
+console.log(weatherCode("AA", decode));
 

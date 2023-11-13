@@ -20,7 +20,7 @@ function userDataNormalizer(personData) {
 async function getUserData() {
   // Создаем переменную куда кладем наш url
   // const apliancesURL = "https://rickandmortyapi.com/api/character";
-  const apliancesURL = "https://yuri018.github.io/UsersTestAPI/";
+  const apliancesURL = "https://yuri018.github.io/testWorkAPI/users.json";
 
   // Получаем обьект Response используя fetch- делая GET запрос
   // и await - для получения результата
@@ -36,7 +36,7 @@ async function getUserData() {
   if (response.ok) {
     // Забираем результат выполнения response, т.е тело ответа(наш обьект)
 
-    const personInfo = result.results; // массив обьектов
+    const personInfo = result.Users; // массив обьектов
 
     const person = personInfo[0]; // забираем обьект с данными юзера
     console.log(person);

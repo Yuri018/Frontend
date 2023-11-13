@@ -19,7 +19,8 @@ function userDataNormalizer(personData) {
 
 async function getUserData() {
   // Создаем переменную куда кладем наш url
-  const apliancesURL = "https://rickandmortyapi.com/api/character";
+  // const apliancesURL = "https://rickandmortyapi.com/api/character";
+  const apliancesURL = "https://yuri018.github.io/UsersTestAPI/";
 
   // Получаем обьект Response используя fetch- делая GET запрос
   // и await - для получения результата

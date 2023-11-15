@@ -6,7 +6,6 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   background-size: cover;
   background-position: center;
 }
@@ -28,10 +27,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 220px;
   text-align: center;
   box-shadow: 3px 3px 3px #ccc;
   background-color: rgba(18, 45, 77, 0.5);
+  backdrop-filter: blur(8px);
 }
 
 header h1 {
@@ -41,18 +41,18 @@ header h1 {
 }
 
 main {
-  height: 80vh;
+  height: 200vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: none;
   background-size: cover;
   background-position: center;
 }
 
 #search-wrapper {
   display: flex;
-  padding: 12px 40px;
+  /* padding-bottom: 40px; */
   justify-content: center;
   width: 710px;
   gap: 14px;
@@ -60,14 +60,13 @@ main {
 
 #city-input {
   display: flex;
-  padding: 12px 40px;
+  padding: 10px 155px;
   border-radius: 40px;
   border: 1px solid #fff;
-  color: #FFF;
-font-size: 20px;
+  color: #fff;
+  font-size: 20px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
-  
 }
 
 #search-button {
@@ -81,7 +80,6 @@ font-size: 20px;
   cursor: pointer;
   color: white;
   font-size: 20px;
-
 }
 
 #search-button:hover {
@@ -89,16 +87,20 @@ font-size: 20px;
 }
 
 #weather-info-container {
-  display: none;
-  flex-direction: column;
+  display: flex;
+  /* flex-direction: column; */
+ justify-content: space-evenly;
   padding: 30px;
-  border: 1px solid #ccc;
-  width: 500px;
-  background-color: deepskyblue;
+  margin-top: 50px;
+  border-radius: 10px;
+  width: 710px;
+  height: 150px;
   box-shadow: 2px 2px 3px #ccc;
   color: white;
   box-sizing: border-box;
   font-weight: bold;
+  background-color: rgba(18, 45, 77, 0.5);
+  backdrop-filter: blur(8px);
 }
 
 #load {
@@ -109,4 +111,30 @@ font-size: 20px;
   padding: 30px;
   width: 500px;
   font-size: 20px;
+}
+
+#weather-icon {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border: none;
+  flex-shrink: 0;
+}
+
+#degree {
+  font-size: 50px;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+#weather-city {
+  width: 250px;
+  padding: 10px;
+}
+
+#degree-and-city {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

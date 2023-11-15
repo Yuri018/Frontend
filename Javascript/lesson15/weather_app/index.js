@@ -11,6 +11,7 @@ const WEATHER_INFO_CONTAINER = document.querySelector(
 // Тексты с информацией
 const WEATHER_CITY = document.querySelector("#weather-city");
 const WEATHER_ICON = document.querySelector("#weather-icon");
+const DEGREE = document.querySelector("#degree");
 
 const APP_ID = "72bbdf1b10168e5e2dc5ec7ceedf1f49";
 
@@ -18,6 +19,7 @@ const APP_ID = "72bbdf1b10168e5e2dc5ec7ceedf1f49";
 // данные о погоде в случае успешного ответа с сервера
 const createWeaterCard = (weatherData) => {
   WEATHER_CITY.textContent = weatherData.name;
+  DEGREE.textContent = Math.round(weatherData.main.temp - 273.15)  + "°";
   // Добавление иконки
   WEATHER_ICON.src = `http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
 
@@ -39,10 +41,8 @@ async function searchWeatherForCity() {
   if (CITY_NAME.length === 0) {
     return alert("Please enter a city name");
   }
-
   LOADING_TEXT.style.display = "flex";
   WEATHER_INFO_CONTAINER.style.display = "none";
-
   try {
     const response = await fetch(URL);
     const result = await response.json();
@@ -53,13 +53,15 @@ async function searchWeatherForCity() {
         response: result,
       });
     }
-
     // Передаем функции createWeatherCard наш result, чтобы создать и показываем карточку с погодой
     createWeaterCard(result);
   } catch (error) {
     console.log(error);
     console.log(error.response);
-    // тут нужно будет написатьь код по работае сошибками и их отображениямт на экране
+    // тут нужно будет написать код по работе с ошибками и их отображениямт на экране
+
+    const ERROR = 'API Error';
+    createWeaterCard(ERROR);
   }
 }
 
